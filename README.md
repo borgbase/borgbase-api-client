@@ -36,7 +36,7 @@ Minimal example as library:
 
 ```python
 from borgbase_api_client.client import GraphQLClient
-from borgbase_api_client.graphql_queries import *
+from borgbase_api_client.mutations import *
 
 client = GraphQLClient()
 client.login(email='xxx', password='xxx')
