@@ -3,10 +3,12 @@
 A simple GraphQL client to execute operations against your [BorgBase.com](https://www.borgbase.com) account. Can be embedded in all kinds of deployment scripts.
 
 ## Setup
-Clone the current repository:
-`$ git clone `
+Clone this repository
+
+`$ git clone https://github.com/borgbase/borgbase-api-client`
 
 Install requirements
+
 `pip install -r requirements.txt`
 
 
@@ -15,6 +17,7 @@ There is an interactive example client in `borgbase_api_client/main.py`. To run 
 `$ python example.py`
 
 Example session:
+
 ```
 $ python example.py
 Enter Email: test@example.com
@@ -31,7 +34,7 @@ INFO:root:Added new repo with path: y4ab823u@y4ab823u.repo.borgbase.com:repo
 
 Minimal example as library: 
 
-```
+```python
 from borgbase_api_client.client import GraphQLClient
 from borgbase_api_client.graphql_queries import *
 
