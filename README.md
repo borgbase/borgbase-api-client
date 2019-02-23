@@ -60,6 +60,8 @@ new_repo_path = res['data']['repoAdd']['repoAdded']['repoPath']
 print('Added new repo with path:', new_repo_path)
 ```
 
+**Security Note**: Hardcoding your username and password in a script is not secure. Currently the API feature is mainly for testing. If you are using the API on a remote server and want to avoid exposing your username and password, please get in touch and you will get a token with limited permissions. (This feature will be added once there is sufficient interest.)
+
 ## Development
 If any features are missing, please open a Github issue against this repo.
 
