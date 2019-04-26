@@ -13,6 +13,8 @@ Install requirements
 
 
 ## Usage
+The full GraphQL API documentation is available [here](https://api.borgbase.com/graphql).
+
 There is an interactive example client in `borgbase_api_client/main.py`. To run the interactive client (will ask for username, password and OTP:
 
 `$ python example.py`
