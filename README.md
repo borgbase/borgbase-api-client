@@ -7,17 +7,17 @@ Clone this repository
 
 `$ git clone https://github.com/borgbase/borgbase-api-client`
 
-Install requirements
+Install `requests` library
 
-`$ pip install -r requirements.txt`
+`$ pip install requests`
 
 
 ## Usage
-The full GraphQL API documentation is available [here](https://api.borgbase.com/graphql).
+Find more details about our GraphQL API in the documentation. A full list of operations is available via [GraphiQL](https://api.borgbase.com/graphql).
 
-There is an interactive example client in `borgbase_api_client/main.py`. To run the interactive client (will ask for username, password and OTP:
+`example.py` has an example on how to create a new SSH key and assign it to a new repo. To run the example, pass your API token as environment variable:
 
-`$ python example.py`
+`$ TOKEN=$YOUR_TOKEN python example.py`
 
 Example session:
 
@@ -41,8 +41,8 @@ Minimal example as library:
 from borgbase_api_client.client import GraphQLClient
 from borgbase_api_client.mutations import *
 
-client = GraphQLClient()
-client.login(email='xxx', password='xxx')
+TOKEN = os.environ.get("TOKEN")
+client = GraphQLClient(TOKEN)
 
 new_key_vars = {
     'name': 'Key for VM-004',
@@ -62,10 +62,8 @@ new_repo_path = res['data']['repoAdd']['repoAdded']['repoPath']
 print('Added new repo with path:', new_repo_path)
 ```
 
-**Security Note**: Hardcoding your username and password in a script is not secure. Currently the API feature is mainly for testing. If you are using the API on a remote server and want to avoid exposing your username and password, please get in touch and you will get a token with limited permissions. (This feature will be added once there is sufficient interest.)
-
 ## Development
-If any features are missing, please open a Github issue against this repo.
+If any features are missing or if you would like further examples, please open a Github issue against this repo.
 
 Additional functionality can be added by calling different GraphQL queries or mutations in `borgbase_api_client/graphql_queries.py`.
 

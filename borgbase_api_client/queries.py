@@ -1,4 +1,4 @@
-REPO_DETAILS = '''
+REPO_DETAILS = """
 query repoList {
   repoList {
     id
@@ -9,4 +9,4 @@ query repoList {
     currentUsage
   }
 }
-'''
+"""

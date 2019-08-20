@@ -1,4 +1,4 @@
-LOGIN = '''
+LOGIN = """
 mutation login(
   $email: String!
   $password: String!
@@ -14,9 +14,9 @@ mutation login(
       }
     }
 }
-'''
+"""
 
-SSH_ADD = '''
+SSH_ADD = """
 mutation sshAdd(
   $name: String!
   $keyData: String!
@@ -34,9 +34,9 @@ mutation sshAdd(
       }
     }
 }
-'''
+"""
 
-REPO_ADD = '''
+REPO_ADD = """
 mutation repoAdd(
   $name: String
   $quota: Int
@@ -65,4 +65,4 @@ mutation repoAdd(
       }
     }
 }
-'''
+"""
