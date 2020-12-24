@@ -66,3 +66,36 @@ mutation repoAdd(
     }
 }
 """
+
+REPO_EDIT = """
+mutation repoEdit(
+  $id: String!
+  $name: String
+  $quota: Int
+  $quotaEnabled: Boolean
+  $appendOnlyKeys: [String]
+  $fullAccessKeys: [String]
+  $alertDays: Int
+  $borgVersion: String
+  $region: String
+  ) {
+    repoEdit(
+      id: $id
+      name: $name
+      quota: $quota
+      quotaEnabled: $quotaEnabled
+      appendOnlyKeys: $appendOnlyKeys
+      fullAccessKeys: $fullAccessKeys
+      alertDays: $alertDays
+      borgVersion: $borgVersion
+      region: $region
+    ) {
+      repoEdited {
+        id
+        name
+        region
+        repoPath
+      }
+    }
+}
+"""
