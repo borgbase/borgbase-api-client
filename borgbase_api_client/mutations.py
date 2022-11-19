@@ -38,13 +38,13 @@ mutation sshAdd(
 
 REPO_ADD = """
 mutation repoAdd(
-  $name: String
+  $name: String!
   $quota: Int
   $quotaEnabled: Boolean
   $appendOnlyKeys: [String]
   $fullAccessKeys: [String]
   $alertDays: Int
-  $region: String
+  $region: String!
   $borgVersion: String
   ) {
     repoAdd(
